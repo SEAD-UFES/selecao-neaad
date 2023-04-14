@@ -1,0 +1,88 @@
+Arquivos associados:
+// ATENÇÃO: AO ALTERAR ALGUM DESSES BLOCOS DE CÓDIGO, É IMPORTANTE REVISAR OS ARQUIVOS ASSOCIADOS:
+    // 1 - consultarGrupoAnexoProc.php
+    // 2 - criarInscProcesso.php*
+    // 3 - consultarInscProcesso.php
+    // 4 - imprimirCompInscricao.php
+    // 5 - consultarInscProcessoAdmin.php
+    // 6 - fragmentoAvaliarInfComp.php
+
+-- Lembretes
+ - Verifique sempre o layout responsivo
+ - Atenção para telas com scripts hierárquicos como manterItemAnexoProc e alterarVagasChamada
+
+Customizar o css do bootstrap
+- http://getbootstrap.com/customize/
+
+
+/* Estevao */
+
+
+/* Estagiário - Curto prazo */
+
+    - Elaborar painel do administrador 
+        - Editais com calendários vencidos (Futuro)
+
+    - Elaborar painel do coordenador
+         - Editais com calendários vencidos (Futuro)
+    
+    - Elaborar painel do avaliador
+         - Itens a avaliar (Futuro)
+    
+    - Fazer uma revisão geral das páginas (desktop, tablet e mobile)
+
+    - Propor forma do candidato consultar seu status de aprovação no sistema (tela consultarInscProcesso.php)
+    2)  Callout no Painel -> pesquisar por #TP01
+    E:  Vou implementar depois
+
+
+(Deixar por último)   
+    - Propor como será a aba de documentos do edital, dentro de manter edital
+    R:  Rapaz, esqueço muito as coisas de sexta pra segunda kk
+        Esqueci como tínhamos discutido isso
+    E:  Nova aba em manterProcessoAdmin.php 
+    R:  Criei a aba e a página fragmentoTabDocumentos.php, onde coloquei a tabela de Atualizações rsrs
+        Temos que fazer uma tabela exclusiva para aí né?
+        Campos: Data (com hora) | Informação | Visualizar
+        Com scroll... e sem remover campos
+        - Criar botão novo
+
+    - Acessibilidade: Implementar suporte a usuários com limitações.
+
+    - Consultar inscrição usuário (tela interna do minhas inscrições)
+        - Criar tabela de atualização para arquivos ou informações privadas
+
+
+-- Médio Prazo
+
+    - Tela de Ajuda explicar especificidades mobile (tabelas, visualização horizontal, etc)
+
+    - Fluxo Processo
+    E:  Pensar numa forma de checklists para registro das atividades da fase atual
+
+-- Longo Prazo
+
+    - Incluir classe 'wait' no multiselect2side
+      http://stackoverflow.com/questions/14736496/use-font-awesome-icons-in-css
+      http://davidwalsh.name/font-awesome-tags
+
+    - Colocar os números das tabelas alinhados à direita (ou uma solução melhor)
+
+    - Rever esquema de URL's inteligentes
+
+    - consultarInscProcessoAdmin
+        - Implementar a proposta de popover, acionada no ícone (?)
+
+    - Diagramação dos formulários impressos
+
+    - Rever layout de consultarProcesso.php (Talvez se basear no fluxo do admin)
+
+    - Rever diagramação da tela gerenciarNotasInsc.php   
+
+    - Alterar o funcionamento do menu mobile (transformar em select, ou similar) das páginas de Candidato > Currículo
+    E:  Considerar a resposta obtida no stackOverflow
+    R:  Perdemos o link??
+    E:  http://pt.stackoverflow.com/questions/55605/ativar-recurso-de-zoom-dos-navegadores-mobile-em-dropdown
+    R:  Não sei nem por onde começar kk
+        Não consegui testar esta página no meu celular, para ver se realmente imitam o select default
+        Pensei se é mesmo curto prazo

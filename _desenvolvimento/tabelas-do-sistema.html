@@ -1,0 +1,560 @@
+﻿<html>
+    <head>
+        <title>Tabelas do Sistema de Seleção EAD</title>
+        <link rel="stylesheet" type="text/css" href="../css/estilo.css">
+        <style type="text/css">
+            body {background-color:#eee;}
+            tr > td {border:1px solid black;}
+            ul {float:left;}
+        </style>
+    </head>
+
+    <body>
+        <!-- LEGENDA
+        Pag: Página
+        PHP: Documento PHP da página
+        Nome: Nome da tabela
+        Fonte: Arquivo de origem da tabela
+        
+        Cor cinza: Somente em telas grandes (desktop)
+        -->
+
+        <!-- MODELO SEM SCROLL 
+        <table class='table table-hover table-bordered'></table>        
+        -->
+
+        <!-- MODELO COM SCROLL 
+        <div class='table-responsive'>
+            <table class='table table-hover table-bordered'></table>
+        </div>
+        <div class='campoMobile' style='margin-bottom:2em;'>
+            Obs: Se necessário, deslize a tabela da direita para a esquerda para ver colunas ocultas.
+        </div>    
+        -->
+
+
+        <div>
+            <div class="container">
+                <div class="col-full">
+
+                    <h3 class="titulo m02">Início</h3>
+                    <ul>
+                        <li>Pag: Início</li>
+                        <li>PHP: /inicio/ (fragmentoPainelCandidato.php)</li>
+                        <li>Nome: Minhas Inscrições (_tabelaParcialInscUsu)</li>
+                        <li>Fonte: CTProcesso</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Edital</th>
+                            <th>Atribuição</th>
+                            <th>Curso</th>
+                            <th>Chamada</th>
+                            <th style="color:#ccc;">Fase Atual</th>
+                            <th>[Visualizar]</th>
+                        </tr>
+                    </table>
+
+
+                    <h3 class="titulo m04">Formação (Currículo)</h3>
+                    <ul>
+                        <li>Pag: Candidato > Currículo</li>
+                        <li>PHP: listarFormacao.php</li>
+                        <li>Nome: Formação (tabelaFormacaoCandPorFiltroCT)</li>
+                        <li>Fonte: CTCurriculo</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Período</th>
+                            <th>Formação</th>
+                            <th>Curso</th>
+                            <th>[Visualizar]</th>
+                            <th>[Editar]</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table>  
+
+
+                    <h3 class="titulo m04">Publicação (Currículo)</h3>
+                    <ul>
+                        <li>Pag: Candidato > Currículo</li>
+                        <li>PHP: listarPublicacao.php</li>
+                        <li>Nome: Publicação (tabelaPublicacaoCandPorFiltroCT)</li>
+                        <li>Fonte: CTCurriculo</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Item</th>
+                            <th>Área</th>
+                            <th>Nº de Publicações</th>
+                            <th>[Editar]</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Participação em Evento (Currículo)</h3>
+                    <ul>
+                        <li>Pag: Candidato > Currículo</li>
+                        <li>PHP: listarPartEvento.php</li>
+                        <li>Nome: Participação em Evento (tabelaPartEventoCandPorFiltroCT)</li>
+                        <li>Fonte: CTCurriculo</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Item</th>
+                            <th>Área</th>
+                            <th>Quantidade</th>
+                            <th>[Editar]</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table>                     
+
+
+                    <h3 class="titulo m04">Atuação (Currículo)</h3>
+                    <ul>
+                        <li>Pag: Candidato > Currículo</li>
+                        <li>PHP: listarAtuacao.php</li>
+                        <li>Nome: Atuação (tabelaAtuacaoCandPorFiltroCT)</li>
+                        <li>Fonte: CTCurriculo</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Item</th>
+                            <th>Área</th>
+                            <th>Quantidade</th>
+                            <th>[Editar]</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table>                       
+
+
+                    <h3 class="titulo m04">Editais</h3>
+                    <ul>
+                        <li>Pag: Editais</li>
+                        <li>PHP: edital.php</li>
+                        <li>Fonte: CTProcesso</li>
+                        <li>Scroll: Não</li>
+                    </ul>
+                    <br clear="all">
+                    <ul class="m02">
+                        <li>Nome: Novos Editais/Inscrições Abertas (tabelaProcessosApresentacao)</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m01">
+                        <tr>
+                            <th>Edital</th>
+                            <th>Atribuição</th>
+                            <th>Curso</th>
+                            <th style="color:#ccc;">Formação</th>
+                            <th style="color:#ccc;">Inscrições</th>
+                            <th>[Edital]</th>
+                        </tr>
+                    </table> 
+
+                    <ul class="m02">
+                        <li>Nome: Em Andamento (tabelaProcessosApresentacao)</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m01">
+                        <tr>
+                            <th>Edital</th>
+                            <th>Atribuição</th>
+                            <th>Curso</th>
+                            <th style="color:#ccc;">Formação</th>
+                            <th style="color:#ccc;">Fase Atual</th>
+                            <th>[Edital]</th>
+                        </tr>
+                    </table> 
+
+                    <ul class="m02">
+                        <li>Nome: Editais Finalizados (tabelaProcessosApresentacao)</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m01">
+                        <tr>
+                            <th>Edital</th>
+                            <th>Atribuição</th>
+                            <th>Curso</th>
+                            <th style="color:#ccc;">Formação</th>
+                            <th style="color:#ccc;">Data de Finalização</th>
+                            <th>[Edital]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Minhas Inscrições</h3>
+                    <ul>
+                        <li>Pag: Editais > Minhas Inscrições</li>
+                        <li>PHP: listarInscProcessoUsuario.php</li>
+                        <li>Nome: Chamadas em Andamento (tabelaInscricaoUsuario)</li>
+                        <li>Fonte: CTProcesso</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Edital</th>
+                            <th>Atribuição</th>
+                            <th>Curso</th>
+                            <th>Chamada</th>
+                            <th style="color:#ccc;">Fase Atual</th>
+                            <th>[Visualizar]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Polo</h3>
+                    <ul>
+                        <li>Pag: Parametrização > Polo</li>
+                        <li>PHP: polo.php</li>
+                        <li>Nome: Polo (tabelaPoloPorFiltro)</li>
+                        <li>Fonte: CTParametrizacao</li>
+                        <li>Scroll: Não</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Tipo de Atribuição</h3>
+                    <ul>
+                        <li>Pag: Parametrização > Tipo de Atribuição</li>
+                        <li>PHP: tipoAtribuicao.php</li>
+                        <li>Nome: Tipo de Atribuição (tabelaTiposAtribuicao)</li>
+                        <li>Fonte: CTParametrizacao</li>
+                        <li>Scroll: Não</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>URL</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Tipo de Formação</h3>                    
+                    <ul>
+                        <li>Pag: Parametrização > Tipo de Formação</li>
+                        <li>PHP: tipoFormacao.php</li>
+                        <li>Nome: Tipo de Formação (tabelaTiposFormacao)</li>
+                        <li>Fonte: CTParametrizacao</li>
+                        <li>Scroll: Não</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                        </tr>
+                    </table>
+
+
+                    <h3 class="titulo m04">Departamento</h3>
+
+                    <ul>
+                        <li>Pag: Cadastros > Departamento</li>
+                        <li>PHP: listarDepartamento.php</li>
+                        <li>Nome: Departamento (tabelaDepartamentosPorFiltro)</li>
+                        <li>Fonte: CTDepartamento</li>
+                        <li>Scroll: Não</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>[Visualizar]</th>
+                            <th>[Editar]</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Curso</h3>
+                    <ul>
+                        <li>Pag: Cadastros > Curso</li>
+                        <li>PHP: listarCurso.php</li>
+                        <li>Nome: Curso (tabelaCursosPorFiltro)</li>
+                        <li>Fonte: CTCurso</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th style="color:#ccc;">Tipo</th>
+                            <th>Departamento</th>
+                            <th>[Visualizar]</th>
+                            <th>[Editar]</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Usuário</h3>
+                    <ul>
+                        <li>Pag: Cadastros > Usuário</li>
+                        <li>PHP: listarUsuario.php</li>
+                        <li>Nome: Usuário (tabelaUsuariosPorFiltro)</li>
+                        <li>Fonte: CTUsuario</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th style="color:#ccc;">Email</th>
+                            <th style="color:#ccc;">CPF</th>
+                            <th>Tipo</th>
+                            <th>[Visualizar]</th>
+                            <th>[Alterar senha]</th>
+                            <th>[Editar]</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Candidato</h3>
+                    <ul>
+                        <li>Pag: Cadastros > Candidato</li>
+                        <li>PHP: listarCandidato.php</li>
+                        <li>Nome: Candidato (tabelaCandidatosPorFiltro)</li>
+                        <li>Fonte: CTCandidato</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Nome</th>
+                            <th style="color:#ccc;">Email</th>
+                            <th>CPF</th>
+                            <th>[Visualizar]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Editais</h3>
+                    <ul>
+                        <li>Pag: Editais</li>
+                        <li>PHP: listarProcessoAdmin.php</li>
+                        <li>Nome: Editais (tabelaProcessosPorFiltro)</li>
+                        <li>Fonte: CTProcesso</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Edital</th>
+                            <th>Atribuição</th>
+                            <th>Curso</th>
+                            <th style="color:#ccc;">Início</th>
+                            <th style="color:#ccc;">Fim</th>
+                            <th>[Editar]</th>
+                            <th>[Fluxo]</th>
+                            <th style="color:#ccc;">[Inscrições]</th>
+                            <th style="color:#ccc;">[Recursos]</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Avaliação Cega</h3>
+                    <ul>
+                        <li>Pag: Editais > Avaliação Cega</li>
+                        <li>PHP: listarAvaliacaoCegaInsc.php</li>
+                        <li>Nome: Avaliação Cega (tabelaAvalCegaPorProcesso)</li>
+                        <li>Fonte: CTProcesso</li>
+                        <li>Scroll: Não</li>
+                    </ul>
+                    <br clear="all">
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Inscrição</th>
+                            <th>Curso</th>
+                            <th>Edital</th>
+                            <th>Tipo</th>
+                            <th>[Avaliar]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Opções Inf. Comp.</h3>
+                    <ul>
+                        <li>Pag: Editais > Gerenciar > Opções Inf. Comp.</li>
+                        <li>PHP: manterItemAnexoProc.php</li>
+                        <li>Nome: Opções de Resposta (tabelaResposta)</li>
+                        <li>Fonte: manterItemAnexoProc</li>
+                        <li>Scroll: <span style="color:red;">AINDA NÃO CONFIGURADA</span></li>
+                    </ul>
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Ordem</th>
+                            <th>Nome</th>
+                            <th>Cód. de resposta</th>
+                            <th>Complemento</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Avaliadores</h3>
+                    <ul>
+                        <li>Pag: Cadastros > Curso > Consultar</li>
+                        <li>PHP: manterCurso.php</li>
+                        <li>Nome: Avaliadores (tabelaAvaliadoresPorCurso)</li>
+                        <li>Fonte: CTCurso</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Resultados publicados</h3>
+                    <ul>
+                        <li>Pag: Editais > Fluxo > Resultados</li>
+                        <li>PHP: gerenciarResultadosProcesso.php</li>
+                        <li>Nome: Resultados publicados (buscarResultadosPublicadosCT)</li>
+                        <li>Fonte: CTProcesso</li>
+                        <li>Scroll: Não</li>
+                    </ul>
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Documento</th>
+                            <th style="color:#ccc;">Publicado em</th>
+                            <th style="color:#ccc;">Atualizado em</th>
+                        </tr>
+                    </table>
+
+
+                    <h3 class="titulo m04">Atualizações</h3>
+                    <ul>
+                        <li>Pag: Editais > </li>
+                        <li>PHP: fragmentoConsultaProcesso.php</li>
+                        <li>Nome: Atualizações (tabelaAtualizacaoProcesso)</li>
+                        <li>Fonte: CTProcesso</li>
+                        <li>Scroll: Não</li>
+                    </ul>
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Data</th>
+                            <th>Informação</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Notas</h3>
+                    <ul>
+                        <li>Pag: Editais > Inscrições > Visualizar ou Gerenciar Notas</li>
+                        <li>PHP: consultarInscProcessoAdmin.php; gerenciarNotasInsc.php</li>
+                        <li>Nome: Não consta (tabelaRelatorioNotas)</li>
+                        <li>Fonte: CTNotas</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Item</th>
+                            <th>Nota</th>
+                            <th>Norm.</th>
+                            <th>Categoria</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Inscrições com notas validadas (nome quando visitei a pag)</h3>
+                    <ul>
+                        <li>Pag: Editais > Inscrições</li>
+                        <li>PHP: listarInscricaoProcesso.php</li>
+                        <li>Nome: Inscrições (tabelaInscritosPorProcesso)</li>
+                        <li>Fonte: CTProcesso</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Inscrição</th>
+                            <th>Candidato</th>
+                            <th style="color:#ccc;">CPF</th>
+                            <th style="color:#ccc;">Nota</th>
+                            <th>[Editar]</th>
+                            <th>[Visualizar]</th>
+                            <th>[Comprovante]</th>
+                        </tr>
+                    </table> 
+
+
+                    <h3 class="titulo m04">Inf. Complementares</h3>
+                    <ul>
+                        <li>Pag: Editais > Gerenciar (aba Inf. Complementares)</li>
+                        <li>PHP: manterProcessoAdmin</li>
+                        <li>Nome: Inf. Complementares (tabelaInfCompProcPorFiltro)</li>
+                        <li>Fonte: CTManutencaoProcesso</li>
+                        <li>Scroll: Sim</li>
+                    </ul>
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th>Código</th>
+                            <th style="color:#ccc;">Ordem</th>
+                            <th>Nome</th>
+                            <th style="color:#ccc;">Tipo</th>
+                            <th style="color:#ccc;">Obrigatória</th>
+                            <th style="color:#ccc;">Avaliação</th>
+                            <th>[Visualizar]</th>
+                            <th>[Config]</th>
+                            <th>[Editar]</th>
+                            <th>[Excluir]</th>
+                        </tr>
+                    </table> 
+
+
+                    <div class="m04">
+                        &nbsp;
+                    </div>
+
+                    <!--
+                    <h3 class="titulo m04"></h3>
+                    <ul>
+                        <li>Pag:</li>
+                        <li>PHP:</li>
+                        <li>Nome:</li>
+                        <li>Fonte:</li>
+                        <li>Scroll:</li>
+                    </ul>
+                    <table class="table table-bordered m02">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </table> 
+                    -->
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

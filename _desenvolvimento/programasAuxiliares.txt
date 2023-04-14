@@ -1,0 +1,8 @@
+- Less no linux
+npm install -g less
+
+- Minified de CSS e JavaScript no Netbeans
+Plugin: JS CSS Minify Compress
+
+- Otimização de imagens png
+yum install optipng

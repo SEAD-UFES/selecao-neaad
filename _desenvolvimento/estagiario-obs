@@ -1,0 +1,31 @@
+
+/* DOCUMENTO PARA OBSERVAÇÕES A RESPEITO DA PADRONIZAÇÃO DO LAYOUT - LEMBRETES */
+
+Organização correta:
+
+body
+    container
+        row
+            col
+
+
+*   Algumas tags estão com as classes "p15", que é o 'parágrafo/tab' na hierarquia.
+
+
+
+/* LEGENDA DAS CLASSES */
+
+»   m*: Margem superior em em (unidade de comprimento)
+
+    m0p5 (0.5 em)
+    m01 (1 em)
+    m02 (2 em)
+    m02-mob (2em somente em mobile)
+
+
+»   p15: Padding de 15px para implementação de níveis
+
+»   campo*: Habilita ou não o conteúdo
+
+    campoMobile: o conteúdo desaparece em telas MAIORES de 992px
+    campoDesktop: o conteúdo desaparece em telas MENORES de 992px

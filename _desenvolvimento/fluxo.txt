@@ -1,0 +1,69 @@
+Objetivo da tela 
+    Permitir que o Admin controle o fluxo do edital no sistema, a partir de sua criação, até a finalização do edital.
+    Basicamente, é nesta tela que o admin poderá finalizar uma etapa e iniciar outra. Por questões de escalabilidade,
+    os dados devem ser apresentados por chamada (em abas), ou seja, em cada aba existirá o fluxo da chamada em questão. 
+    Assim, detalharemos o fluxo de uma aba específica (Ex: Primeira Chamada)
+
+Fases de uma chamada
+    Em construção
+        - A chamada está em fase de criação, ainda não foi ativada, não estando pronta para ser exibida aos candidatos
+        Ações:
+            - Editar(B)
+
+    Fechada
+        - A chamada já está toda configurada, sendo exibida aos candidatos mas com período de inscrição posterior
+        Ações:
+            - Editar(B)
+
+    Período de Inscrição
+        - A chamada está em período de inscrição
+        Ações:
+            - Editar(B), Prorrogar inscrição(B), Inscritos(A), Exportar dados gerais(B), Exportar notas(B), 
+              Avaliação Cega(M), Validar Comprovante(B)
+    
+    Para cada Etapa de Avaliação (X: de 1 a n):
+        Processando resultado parcial da Etapa X
+            - Já terminou o período de inscrição e é hora de avaliar todos os candidatos inscritos para gerar o resultado parcial da etapa
+            Ações:
+                - Editar(B), Alterar calendário(B), Inscritos(A), Exportar dados gerais(B), Exportar notas(B), 
+                  Avaliação Cega(M), Validar Comprovante(B), Gerar Classificação(A), Exportar Classificação(B),
+                  Gerar resultado(B), Consultar resultado(B), { Publicar resultado(B) [Apenas Admin] }
+        
+        Aguardando período de recurso da Etapa X
+            - Ao publicar o resultado, a chamada passa por esta etapa, enquanto a data de recurso for posterior a data atual
+            Ações:
+                - Editar(B), Alterar calendário(B), Inscritos(A), Exportar dados gerais(B), Exportar notas(B), 
+                  Validar Comprovante(B)
+
+        Período de recurso da Etapa X
+            - Período em que os recursos são submetidos para avaliação
+            Ações:
+                - Editar(B), Prorrogar prazo(B), Inscritos(A), Exportar dados gerais(B), Exportar notas(B),
+                  Validar Comprovante(B), Recursos(A), Exportar recursos(B)
+
+        Processamento do recurso da Etapa X
+            - Nesta fase, todos os recursos são analisados e respondidos, gerando um novo resultado  
+            Ações:
+                - Editar(B), Alterar calendário(B), Inscritos(A), Exportar dados gerais(B), Exportar notas(B),
+                  Validar Comprovante(B), Recursos(A), Exportar recursos(B), Gerar Classificação(A),
+                  Exportar Classificação(B),  Gerar resultado(B), Consultar resultado(B), { Publicar resultado(B) [Apenas Admin] }
+
+        Se é a última Etapa, então:
+            - O resultado anterior é o resultado final e a chamada vai para a fase Finalizada
+        Senão:
+            - O resultado anterior é o resultado final da Etapa X
+
+    Finalizada
+        - A chamada está finalizada e apenas consultas podem ser realizadas.
+        Ações:
+            - Inscritos(A), Exportar dados gerais(B), Exportar notas(B),
+              Validar Comprovante(B), Recursos(A), Exportar recursos(B), Exportar Classificação(B)
+            
+
+            
+
+
+
+Legenda:
+Ações = Links na tela para acesso direto à função especificada
+Prioridade (A - Alta, M - Média, B - Baixa)

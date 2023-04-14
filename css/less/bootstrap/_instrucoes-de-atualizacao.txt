@@ -1,0 +1,10 @@
+
+<!-- O que fazer quando atualizar Bootstrap -->
+
+- Atualizar somente os arquivos LESS (raíz e mixins) na pasta selecaoneaad/css/less/bootstrap
+
+- Apagar arquivo:
+glyphicons.less
+
+- Abrir bootstrap.less e apagar:
+@import "glyphicons.less";

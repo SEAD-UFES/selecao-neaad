@@ -1,0 +1,118 @@
+Pendências:
+ - Depois de um edital finalizado, mesmo se reaberto, não é possivel alterar notas, reclassificar e postar errata do resultado final.
+ - Criar outro tipo de avaliação no tipos de avaliação (Baseada em questionário) onde os alunos preenchem um questionário e as notas já são aplicadas para correção posterior do avaliador.
+ - Permitir a criação de areas no itens de avaliação?
+ - Melhorar exportação de respostas das informações complementares
+ - Atualizar tela inicial do Administrador
+ - Enviar email com novidades sobre o processo de inscrição.
+ - Verificar o que fazer com histórico de exclusão de inscrições quanto à interface.
+ - Incluir Área de Atuação no Menu de Parametrização
+ - Agrupar editais semelhantes na lista de editais em aberto, no caso de existir mais de um edital com o mesmo número
+ - Realizar revalidação no servidor. Verificar cada controle e validar os parâmetros antes da
+submissão.
+ - Importar currículo lattes
+ - Incluir opção de visualizar currículo para o candidato
+ - Remover página extra do comprovante de inscrição em alguns casos
+ - Exportar arquivos direto em excel
+ - Inserir esquema com dados do candidato na tela de recursos! 
+ - Criar funcao de alterar inscrição: Específico para o coordenador em casos especiais.
+ - Melhorar relatório de notas, quanto a apresentação dos ajustes!
+ - Criar opção de salvar categorias de avaliação e etc: Uma opção duplicar!
+ - Melhorar segurança do Ajax para campos de consulta
+ - Revisar segurança dos controles.
+ - Criar exportação de dados completa, com seleção dos campos desejados.
+ - Incluir envio de email para candidatos.
+ - Incluir uma função de visualizar como ficará o edital.
+ - Informar a unidade de atuação nas telas de configuração da avaliação, como por semestre, por ano, etc...
+ - Criar infomação complementar do tipo envio de arquivo
+ - Acertar notas em avaliação cega e edição, incluindo limite máximo para o campo nota.
+ - Criar histórico de coordenadores, para saber quem foi o coordenador do curso em determinado período. 
+ - Criar tela para criação de reserva de vagas, polo, atribuição, tipo de cargo, etc...
+ - Em recurso, enviar anexos.
+ - Adicionar na interface de configuração do edital um check-list com as tarefas que estão ok ou um 'x' nas tarefas que estão problemáticas.
+  - Pode ser uma convenção: Exclamação nos itens inválidos
+ - Avisar, na página de edição da configuração do edital, quando já estiver inscrições. (Por exemplo: Adicionar área de atuação ou reserva de vagas pode dar problema)
+- Colocar lembrete na tela inicial do coordenador / admin sobre chamadas inativas
+- Rever divisão / esquemas das sessões de login do sistema
+- Implementar permissão em 'gerenciar nota', tabela listarInscProcesso.
+- Implementar validação de cadasto via envio de email (primário e secundário)
+- Incluir gerador de url inteligente
+- Melhorar interface para adição de curso
+  - Melhorar select de departamento (Inserir uma opção de pesquisa)
+  - Adicionar select para escolher avaliadores do curso
+  - Tirar avaliadores da tabela usuários e implementar algo mais elaborado, de forma que um avaliador 
+  avalie vários cursos
+- Incluir opção para desativar um Edital
+- Incluir cursos de um departamento na tela de consulta de departamento
+- Paginar dados do candidato na tela de consulta de inscrição e consulta de usuário
+- criar o Edital direto no sistema, com base na configuração pretendida
+- Incluir opção de ver apenas os candidatos em cadastro de reserva na lista de inscritos de um processo
+
+
+IMPORTANTE
+- Implementar inf. complementar com avaliação cega e aval. normal
+- Mostrar de qual etapa é a nota em questão!
+- Adicionar aba nota final, com explicação da nota final do candidato.
+- Mostrar vagas que sobraram para o admin 
+- Implementar comutação de vagas no caso de reserva de vagas
+  - Parametrizado: O usuário informa se quer usar a comutação ou não. Se usar, as vagas serão preenchidas com base na nota final
+- Criar uma mensagem curta para apresentação dos critérios de eliminação nos PDF's
+- Permitir que o administrador veja as chaves atribuidas as opções de multipla escolha na tela de visualização
+- Enviar email ao administrador sobre o andamento de editais
+- Notificar usuário sobre o resultado do edital (no sistema e por email)
+- Criar opção para o coordenador solicitar a publicação do resultado
+- Incluir opção para visualização do resultado pendente
+- Implementar revisão da segurança dos controles, previnindo acesso indevido a dados
+- Implementar função de reabrir etapa para publicação de resultado anterior
+- Exibir alterações detalhadas dos documentos de editais para o administrador
+- Implementar esquema de salvar página de acesso para todos os casos
+- Bloquear retrocessos no calendário pra evitar, por exemplo, que o cara se inscreva e depois alguém altera o prazo 
+de inscrição e ele se inscreve 'fora do prazo'
+- Gerar arquivo em excel ao invés de csv: http://phpexcel.codeplex.com/
+- Adicionar todos os tipos de formação na escolha de itens de avaliação para a categoria publicação
+- Implementar retificação de resultado pós-recursos
+- Auto selecionar os campos a serem alterados
+- Nomear abas de um jeito amigável
+- Criar interface para reserva de vagas
+- Criar justificativas de eliminação pré-configuradas
+- Permitir que um administrador cancele a inscrição de um candidato
+- registrar log de reabertura e alteração de finalização de chamada e edital
+- Quando o candidato passar ou ficar em cadastro de reserva, informar a ele sua nota e classificacao
+- Melhorar forma de ativar chamada
+- Alterar todos códigos diretos da tabela (Chave primária) que aparecem na interface para um código mais amigável ao usuário
+- Mostrar os tipos de cargos inativos na tabela de cargos (Tipo de atribuição)
+- Criar função de suspender edital
+- Gerar número do edital automaticamente -> gerar PDF do edital automaticamente
+- Transportar reserva de vagas para a chamada
+- estudar aplicação de union, except e intersect para otimização das consultas mysql
+- criar indices para otimização da consulta
+-  INSERT ... ON DUPLICATE KEY UPDATE quando apropriado
+- Exibir estatísticas de inscrição dos candidatos na listagem de candidatos em listarCandidato.
+- Enviar alerta de novos editais por email
+
+URGENTE:
+- "acao Registrar notas" dando bug quando usuário tenta atualizar informação complementar, não obrigatória que vale nota.
+- Encontrar o usuário "hardcoded" selecaoneaad@locahost.
+- Permitir edição de notas das inf. complementares (feito com bug)
+- Controlar a mudança de login, registrando os dados da alteração
+- Bloquear um candidato eliminado de abrir recurso na etapa seguinte.
+- Impedir acesso ao botão de classificacao no caso da impossibilidade de usá-lo
+
+
+Boas práticas:
+ - Criar Subpastas em /visao
+ - usar parâmetro hidden 'valido' para identificar destinatário de requisições
+ - Padronizar tipo de chamada a controles, com parte identificadora do controle + ação
+ - Nunca incluir em BO's chamadas a uma classe de controle
+ - Atenção ao utilizar plugin jquery de máscara: Existem dois plugins. No geral, jquery.mask é melhor
+ - Instalar Ldap Utils para consultas ao LDAP: yum install openldap-clients
+
+ 
+DNS
+172.20.2.126
+172.20.11.205
+UFES
+
+
+
+

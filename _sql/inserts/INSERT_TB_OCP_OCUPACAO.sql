@@ -1,0 +1,17 @@
+INSERT INTO `tb_ocp_ocupacao` VALUES (1,1,'Membro das Forças Armadas, Policial e Bombeiro Militar');
+INSERT INTO `tb_ocp_ocupacao` VALUES (2,2,'Membro Superior do Poder Público, Dirigente de Organizações e de Empresas');
+INSERT INTO `tb_ocp_ocupacao` VALUES (3,3,'Profissional de Nível Superior');
+INSERT INTO `tb_ocp_ocupacao` VALUES (4,4,'Professor de Nível Superior na Educação Infantil e no Ensino Fundamental');
+INSERT INTO `tb_ocp_ocupacao` VALUES (5,5,'Professor do Ensino Médio');
+INSERT INTO `tb_ocp_ocupacao` VALUES (6,6,'Professor e Instrutor do Ensino Profissional');
+INSERT INTO `tb_ocp_ocupacao` VALUES (7,7,'Professor do Ensino Superior');
+INSERT INTO `tb_ocp_ocupacao` VALUES (8,8,'Outro Profissional do Ensino');
+INSERT INTO `tb_ocp_ocupacao` VALUES (9,9,'Profissional das Ciências e das Artes');
+INSERT INTO `tb_ocp_ocupacao` VALUES (10,10,'Técnico de Nível Médio');
+INSERT INTO `tb_ocp_ocupacao` VALUES (11,11,'Trabalhador de Serviços Administrativos');
+INSERT INTO `tb_ocp_ocupacao` VALUES (12,12,'Trabalhador dos Serviços, Vendedor do Comércio em Lojas e Mercados');
+INSERT INTO `tb_ocp_ocupacao` VALUES (13,13,'Trabalhador Agropecuário, Florestal e da Pesca');
+INSERT INTO `tb_ocp_ocupacao` VALUES (14,14,'Trabalhador da Produção de Bens e Serviços Industriais');
+INSERT INTO `tb_ocp_ocupacao` VALUES (15,15,'Trabalhador em Serviços de Reparação e Manutenção');
+INSERT INTO `tb_ocp_ocupacao` VALUES (16,16,'Estudante Universitário');
+INSERT INTO `tb_ocp_ocupacao` VALUES (17,17,'Estudante do Ensino Médio');

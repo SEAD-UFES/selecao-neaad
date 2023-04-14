@@ -1,0 +1,172 @@
+.toast-container {
+    width: 280px;
+    z-index: 9999;
+}
+
+* html .toast-container {
+    position: absolute;
+}
+
+.toast-item {
+    width: 280px;
+    float:left;
+    padding:0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+
+    p {
+        margin-left: 50px;
+    }
+
+    .completo {
+        padding: 5px 20px 20px 20px;
+        width: 90% !important;
+        margin-top: 1em;
+
+        .toast-item-image {
+            width:20%;
+            float:left;
+            text-align:left;
+        }
+
+        .mensagem {
+            width:80%;
+            float:left;
+
+            p {
+                margin-left:0px;
+                margin-bottom:0px;
+                
+                b{display:block;}
+            }
+        }
+    }
+
+    .fechar {
+        width:10%;
+        float:left;
+        text-align:right;
+        margin:0px;
+    }
+
+    &-close {
+        margin:10px;
+        display:inline;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        /*float:right;*/
+        cursor: pointer;
+
+        &:before {
+            content: "\f00d";
+        }
+    }
+
+    &-image {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 2em;
+
+        &-notice:before {
+            content: "\f05a";
+        }
+
+        &-success:before {
+            content: "\f058";
+        }
+
+        &-warning:before {
+            content: "\f06a";
+        }
+
+        &-error:before {
+            content: "\f057";
+        }
+    }
+}
+
+/**
+ * toast types
+ *
+ * pattern: toast-type-[value]
+ * where 'value' is the real value of the plugin option 'type'
+ *
+ */
+
+.toast-type {
+    &-notice {
+        color: #3a87ad;
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+    &-success {
+        color: #468847;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    &-warning {
+        color: #c09853;
+        background-color: #fcf8e3;
+        border-color: #fbeed5;
+    }
+    &-error {
+        color: #b94a48;
+        background-color: #f2dede;
+        border-color: #eed3d7;
+    }
+}
+
+/**
+ * positions
+ *
+ * pattern: toast-position-[value]
+ * where 'value' is the real value of the plugin option 'position'
+ *
+ */
+
+.toast-position {
+    &-top-left {
+        position: fixed;
+        left: 20px;
+        top: 20px;
+    }
+    &-top-center {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        margin-left: -140px;
+    }
+    &-top-right {
+        position: fixed;
+        top: 180px;
+        right: 20px;
+    }
+    &-middle-left {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        margin-top: -40px;
+    }
+    &-middle-center {
+        position: fixed;
+        left: 50%;
+        margin-left: -140px;
+        margin-top: -40px;
+        top: 50%;
+    }
+    &-middle-right {
+        position: fixed;
+        right: 20px;
+        margin-left: -140px;
+        margin-top: -40px;
+        top: 50%;
+    }
+}

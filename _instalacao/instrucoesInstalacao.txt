@@ -1,0 +1,176 @@
+ATENÇÃO: Este sistema foi projetado para ser instalado em servidores linux
+
+-----------------------------------** CONFIGURAÇÕES DO SERVIDOR FEDORA**-----------------------------
+-- Antes de instalar o sistema, verifique:
+
+-- Suporte a mbstring
+yum install php-mbstring
+
+-- Permitir htaccess
+Editar httpd.conf (/etc/httpd/conf/httpd.conf Fedora) e alterar a permissão AllowOverride do diretório de arquivos www (geralmente /var/www/html) para:
+AllowOverride FileInfo
+
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------** CONFIGURAÇÕES DO SERVIDOR UBUNTU**-----------------------------
+-- Antes de instalar o sistema, verifique:
+
+-- Suporte a mbstring (já vem embutida em libapache2-mod-php5)
+sudo apt-get install libapache2-mod-php5
+
+-- Permitir htaccess
+Editar 000-default.conf (/etc/apache2/sites-available/000-default.conf)
+Procurar a declaração da raiz (geralmente DocumentRoot /var/www/html) e inserir abaixo
+
+<Directory "/var/www/html">
+   AllowOverride All
+</Directory>
+
+Valido para UBUNTU Versões superiores a 13.10
+mais informações em http://gilbertoalbino.com/linux-habilitar-mod_rewrite-no-ubuntu/
+-----------------------------------------------------------------------------------------------
+
+-----------------------------------** LDAP - LINUX - FEDORA **---------------------------------
+-- Para configuração do LDAP UFES:
+
+Instalar: yum install php-ldap
+Copiar: ca-ldap1.crt para /etc/pki/tls/certs
+
+Comandos:
+
+# Create hash links to the certs
+cd /etc/pki/tls/certs
+for i in `ls *.crt`;do
+        [ ! -e $i.0 ] && ln -s $i $(openssl x509 -hash -noout -in $i).0 > /dev/null 2>&1 || :
+done
+
+for i in `ls *.crt`
+do
+     cat $i >> /etc/pki/tls/certs/local-bundle.crt
+done
+
+Editar  /etc/openldap/ldap.conf
+Inserir: 
+TLS_CACERTDIR   /etc/pki/tls/certs
+TLS_CACERT      /etc/pki/tls/certs/local-bundle.crt
+
+Mais informações:
+http://www.mediawiki.org/wiki/Extension:LDAP_Authentication/Requirements
+-----------------------------------------------------------------------------------------------
+
+
+-----------------------------------** LDAP - LINUX - UBUNTU **---------------------------------
+-- Para configuração do LDAP UFES:
+
+Instalar: apt-get install php5-ldap
+Copiar: ca-ldap1.crt para /etc/pki/tls/certs
+
+Comandos:
+
+# Create hash links to the certs
+cd /etc/pki/tls/certs
+for i in `ls *.crt`;do
+        [ ! -e $i.0 ] && ln -s $i $(openssl x509 -hash -noout -in $i).0 > /dev/null 2>&1 || :
+done
+
+for i in `ls *.crt`
+do
+     cat $i >> /etc/pki/tls/certs/local-bundle.crt
+done
+
+Editar  /etc/ldap/ldap.conf
+Inserir: 
+TLS_CACERTDIR   /etc/pki/tls/certs
+TLS_CACERT      /etc/pki/tls/certs/local-bundle.crt
+
+
+-----------------------------------** CONFIGURAÇAO MYSQL **------------------------------------
+-- Algumas configurações do servidor mysql:
+
+-- Editar /etc/my.cnf e incluir: lower_case_table_names=1
+
+
+-- SOCKET MYSQL para MYSQLI:
+
+-- Verificar Socket em: /etc/my.cnf
+Exemplo: socket=/var/lib/mysql/mysql.sock
+
+Editar php.ini em /etc/php.ini e incluir socket
+mysqli.default_socket = <socket>
+Exemplo: mysqli.default_socket = /var/lib/mysql/mysql.sock
+
+
+-- Exportação / Importação de bases
+
+-- Exportar bases
+mysqldump -h <Endereço do Servidor> -u <usuario> -p<Senha> <Nome do Banco>  > <Arquivo SQL destino>
+
+-- Executar arquivos de importaçao via linha de comando
+mysql -h <Endereço do Servidor> -u <usuario> -p<Senha> --default-character-set=utf8 <Nome do Banco> < <Arquivo SQL>
+
+Mais infomações:
+http://www.delete.com.br/mysqldump-import-export-sem-misterios/
+
+-----------------------------------------------------------------------------------------------
+
+
+
+
+---------------------------------** INSTALAÇÃO e ATUALIZAÇÃO **----------------------------------------------
+-- Antes da instalação ou atualização:
+
+1 - Gerar o minified dos arquivos de JavaScript e CSS
+    - Plugin do netbeans: minify
+    - Apenas clicar na pasta e gerar os minified
+
+-- Siga os passos abaixo para instalar o sistema corretamente:
+
+1 - Copiar as pastas _sql e _instalacao para um local temporário no servidor de instalação
+2 - Criar os usuarios do banco conforme necessidade, de acordo com o arquivo sql/CREATE_USUARIOS_MYSQL_BD
+3 - Configurar o script instalacaoBD.sh conforme a realidade do servidor e executá-lo
+4 - Alterar o arquivo sitemap.xml colocando o link de acesso do servidor a ser instalado.
+5 - Copiar todas as pastas (exceto as pastas .svn, nbproject e _*) 
+    e todos os arquivos da raiz (exceto o arquivo auxiliaTeste.php) para o servidor de instalação
+6 - Configurar o sistema no arquivo config.php
+7 - Configurar o arquivo .htaccess de acordo com a realidade do servidor
+8 - Acessar o sistema como suporte.sead.ufes@gmail.com adminNeaad e fazer as configurações iniciais
+
+
+-- Em uma atualização:
+1 - Executar eventuais updates (ver arquivo sql/UPDATE_SELECAO_NEAAD.sql) no banco de atualização
+2 - Copiar todas as pastas (exceto as pastas .svn, nbproject, editais e _*)
+    e todos os arquivos da raiz (exceto os arquivos config.php e auxiliaTeste.php) para o servidor de atualização
+3 - Configurar o arquivo .htaccess de acordo com a realidade do servidor
+
+
+-- Ambiente de teste:
+Caso a instalação seja para um ambiente de teste, copie o arquivo auxiliaTeste.php e faça os 
+seguintes procedimentos:
+1 - Crie a pasta scripts-selecaoneaad em /var para armazenar os scripts
+mkdir /var/scripts-selecaoneaad
+2 - Copie o arquivo instalacao/instalacaoBD.sh e a pasta _sql para a pasta criada
+3 - Configure o script instalacaoBD.sh para instalar o banco de teste do sistema
+4 - Altere as permissões conforme a seguir:
+chown -R root /var/scripts-selecaoneaad/
+chgrp -R apache /var/scripts-selecaoneaad/
+chmod -R 750 /var/scripts-selecaoneaad/
+5 - Observe que o config do sistema de testes, deve estar configurado para o ambiente de produção!
+
+
+-- Permissões (antes de executar os comandos certifique-se de estar na pasta onde está os arquivos do sistema)
+
+1 - Alterar o dono da pasta para o usuário ftp
+chown -R <usuFtp> .
+
+2 - Alterar o grupo para o usuário apache
+chgrp -R apache .
+
+3 - Alterar as permissões da pasta
+chmod -R 750 .
+
+4 - Permissão especial da pasta editais
+chmod -R 770  editais/
+
+
+OBS: Se for necessário atualizar o config, não esqueça de reconfigurá-lo.
+-----------------------------------------------------------------------------------------------
